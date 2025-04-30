@@ -1,0 +1,17 @@
+{
+  "name": "samaphp/microapp-dev",
+  "description": "Developer tools for MicroApp",
+  "type": "library",
+  "license": "MIT",
+  "require-dev": {
+    "samaphp/microapp": "^0.6"
+  },
+  "bin": [
+    "bin/init.php",
+    "bin/init-autoload.php",
+    "bin/init-htaccess.php",
+    "bin/init-index.php",
+    "bin/make-controller.php",
+    "bin/route-list.php"
+  ]
+}
