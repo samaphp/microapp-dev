@@ -17,6 +17,7 @@ require __DIR__ . '/vendor/autoload.php';
 use MicroApp\MicroApp;
 
 \$app = new MicroApp();
+\$app->loadMiddlewareFrom(__DIR__ . '/src/Middleware', 'App\\\\Middleware');
 \$app->loadRoutesFrom(__DIR__ . '/src/Controller', 'App\\\\Controller');
 \$app->dispatch();
 PHP;
