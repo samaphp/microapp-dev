@@ -55,14 +55,21 @@ use MicroApp\MicroApp;
 
 class {$controllerClass}
 {
-    public function routes(MicroApp \$app): void
+    protected MicroApp \$app;
+
+    public function __construct(MicroApp \$app)
     {
-        \$app->get('{$route}', [\$this, 'index']);
+        \$this->app = \$app;
+    }
+
+    public function routes(): void
+    {
+        \$this->app->get('{$route}', [\$this, 'index']);
     }
 
     public function index(): void
     {
-        echo 'Hello from {$controllerClass}';
+        \$this->app->jsonResponse(['Hello from {$controllerClass}']);
     }
 }
 PHP;
