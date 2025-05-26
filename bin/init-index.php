@@ -16,6 +16,10 @@ require __DIR__ . '/vendor/autoload.php';
 
 use MicroApp\MicroApp;
 
+// error_reporting(E_ALL);
+// ini_set('display_errors', '1');
+// define('APP_DEBUG', TRUE);
+
 \$app = new MicroApp();
 \$app->loadMiddlewareFrom(__DIR__ . '/src/Middleware', 'App\\\\Middleware');
 \$app->loadRoutesFrom(__DIR__ . '/src/Controller', 'App\\\\Controller');
