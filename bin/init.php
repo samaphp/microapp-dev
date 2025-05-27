@@ -17,4 +17,8 @@ passthru("php $base/init-index.php");
 echo "⚙️ Scaffolding index controller...\n";
 passthru("php $base/make-controller.php IndexController /");
 
+echo "⚙️ Creating empty Middleware and Service folders...\n";
+mkdir(getcwd() . '/src/Middleware', 0755, true);
+mkdir(getcwd() . '/src/Service', 0755, true);
+
 echo "✅ MicroApp Init Complete.\n";
