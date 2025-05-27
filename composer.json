@@ -12,6 +12,8 @@
     "bin/init-htaccess.php",
     "bin/init-index.php",
     "bin/make-controller.php",
+    "bin/make-middleware.php",
+    "bin/middleware-list.php",
     "bin/route-list.php"
   ]
 }
